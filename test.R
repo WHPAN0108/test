@@ -34,7 +34,7 @@ time_plot<-function(x){
   cond<-rep(c("WT","KO"),each=6)
   Time<-rep(seq(from= 0, to= 20,by = 4),2)
   DF<-data.frame(GE_value,cond,Time)
-  GGP<-ggplot(aes(y=GE_value,x=Time),data=DF)+geom_point()+geom_line()+facet_wrap(~cond)
+  GGP<-ggplot(aes(y=GE_value,x=Time),data=DF)+geom_point()+geom_line()+facet_wrap(cond~)
   print(GGP)
 }
 
